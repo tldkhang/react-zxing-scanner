@@ -1,5 +1,5 @@
 <h1 align="center">
-  🥥 react-zxing-scanner
+  [![Icon][gif-scan]] react-zxing-scanner
 </h1>
 
 <div align="center">
@@ -52,3 +52,4 @@ export const App = () => {
 [version-badge]: assets/version.svg
 [package]: https://www.npmjs.com/package/react-zxing-scanner
 [npmtrends]: https://npmtrends.com/react-zxing-scanner
+[gif-scan]: assets/barcode.gif
