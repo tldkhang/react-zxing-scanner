@@ -1,8 +1,11 @@
 # react-zxing-scanner
 
-Requires base Zebra Crossing Library
+Install react-zxing-scanner library
+    npm i react-zxing-scanner
+    yarn add react-zxing-scanner
 
-    yarn add @zxing/library
+MacOs recommend install
+    bun add react-zxing-scanner
 
 Then you can use the ScannerComponent
 
