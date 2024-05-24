@@ -17,10 +17,21 @@ bun add react-zxing-scanner
 ```
 </details>
 
-Example
 
-    import  BarcodeScanner  from "react-zxing-scanner";
+## Usage
 
-    <BarcodeScanner />
+Here is a quick example, using the default ScrollView renderer.
 
-   
+```tsx
+import React from 'react';
+import  BarcodeScanner  from "react-zxing-scanner";
+
+export const App = () => {
+
+  return (
+    <>
+       <BarcodeScanner />
+    </>
+  );
+};
+```
