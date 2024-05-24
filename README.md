@@ -48,7 +48,7 @@ export const App = () => {
 };
 ```
 
-[downloads-badge]: src/assets/downloads.svg
+[downloads-badge]: assets/downloads.svg
+[version-badge]: assets/version.svg
 [package]: https://www.npmjs.com/package/react-zxing-scanner
 [npmtrends]: https://npmtrends.com/react-zxing-scanner
-[version-badge]: src/assets/version.svg
