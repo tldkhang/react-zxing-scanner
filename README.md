@@ -1,6 +1,20 @@
 <h1 style="display: flex !important; justify-content: center !important;">
-  <image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px "/>
-  <div>react-zxing-scanner<div>
+  <!-- <image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px "/>
+  <div>react-zxing-scanner<div> -->
+  <kbd>
+    <img
+      src="https://github.com/DylanVann/react-native-fast-image/blob/main/docs/assets/scroll.gif?raw=true"
+      title="Scroll Demo"
+      float="left"
+    >
+  </kbd>
+  <kbd>
+    <img
+      src="https://github.com/DylanVann/react-native-fast-image/blob/main/docs/assets/priority.gif?raw=true"
+      title="Priority Demo"
+      float="left"
+    >
+  </kbd>
 </h1>
 
 <div align="center">
