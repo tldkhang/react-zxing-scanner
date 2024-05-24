@@ -3,23 +3,17 @@
 Install react-zxing-scanner library
 
     npm i react-zxing-scanner
+              or
     yarn add react-zxing-scanner
 
-MacOs recommend install
+MacOS recommend install
 
     bun add react-zxing-scanner
 
-Then you can use the ScannerComponent
+Example
 
-    import  React  from  "react";
-    import  ScannerComponent  from "../_components/generic/ScannerComponent";
+    import  BarcodeScanner  from "react-zxing-scanner";
 
-    <ScannerComponent
-      started={startScanner}
-      onResult={this.handleBarcode}
-      showButtons={false}
-    />
+    <BarcodeScanner />
 
-    function handleBarcode = (barcode) => {
-      console.log('scanned result',barcode.text);
-    }
+   
