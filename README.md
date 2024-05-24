@@ -6,8 +6,8 @@
 
 Performant ReactJS Scanner barcode.
 
-[![Version]][package]
-[![Downloads]][npmtrends]
+[![Version][version-badge]][package]
+[![Downloads][downloads-badge]][npmtrends]
 
 </div>
 
@@ -48,6 +48,7 @@ export const App = () => {
 };
 ```
 
-
+[downloads-badge]: https://img.shields.io/npm/dm/react-native-fast-image.svg
 [package]: https://www.npmjs.com/package/react-zxing-scanner
 [npmtrends]: https://npmtrends.com/react-zxing-scanner
+[version-badge]: https://img.shields.io/npm/v/react-native-fast-image.svg
