@@ -54,4 +54,4 @@ export const App = () => {
 [version-badge]: assets/version.svg
 [package]: https://www.npmjs.com/package/react-zxing-scanner
 [npmtrends]: https://npmtrends.com/react-zxing-scanner
-[gif-scan]: assets/barcode.gif
+[gif-scan]: assets/barcode1.gif
