@@ -1,4 +1,4 @@
-<h1  align="center" style="display: flex !important; justify-content: center;">
+<h1 style="display: flex !important; justify-content: center !important;">
   <image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px "/>
   <div>react-zxing-scanner<div>
 </h1>
