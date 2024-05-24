@@ -1,7 +1,7 @@
-
-<h1 align="center">
-
-  ![Icon][gif-scan] react-zxing-scanner
+<h1 style="display: flex; justify-content: center">
+<image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px "/>
+  
+  react-zxing-scanner
 
 </h1>
 
@@ -12,7 +12,6 @@ Performant ReactJS Scanner barcode.
 [![Downloads][downloads-badge]][npmtrends]
 
 </div>
-
 
 ## Installation
 
@@ -37,14 +36,13 @@ bun add react-zxing-scanner
 Here is a quick example
 
 ```tsx
-import React from 'react';
-import  BarcodeScanner  from "react-zxing-scanner";
+import React from "react";
+import BarcodeScanner from "react-zxing-scanner";
 
 export const App = () => {
-
   return (
     <>
-       <BarcodeScanner />
+      <BarcodeScanner />
     </>
   );
 };
@@ -54,4 +52,3 @@ export const App = () => {
 [version-badge]: assets/version.svg
 [package]: https://www.npmjs.com/package/react-zxing-scanner
 [npmtrends]: https://npmtrends.com/react-zxing-scanner
-[gif-scan]: assets/barcode.gif
