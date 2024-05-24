@@ -48,7 +48,7 @@ export const App = () => {
 };
 ```
 
-[downloads-badge]: https://img.shields.io/npm/dm/react-native-fast-image.svg
+[downloads-badge]: src/assets/downloads.svg
 [package]: https://www.npmjs.com/package/react-zxing-scanner
 [npmtrends]: https://npmtrends.com/react-zxing-scanner
-[version-badge]: https://img.shields.io/npm/v/react-native-fast-image.svg
+[version-badge]: src/assets/version.svg
