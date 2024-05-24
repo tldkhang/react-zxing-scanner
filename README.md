@@ -1,4 +1,16 @@
-# react-zxing-scanner
+<h1 align="center">
+  🥥 react-zxing-scanner
+</h1>
+
+<div align="center">
+
+Performant ReactJS Scanner barcode.
+
+[![Version]][package]
+[![Downloads]][npmtrends]
+
+</div>
+
 
 ## Installation
 
@@ -20,7 +32,7 @@ bun add react-zxing-scanner
 
 ## Usage
 
-Here is a quick example, using the default ScrollView renderer.
+Here is a quick example
 
 ```tsx
 import React from 'react';
@@ -35,3 +47,7 @@ export const App = () => {
   );
 };
 ```
+
+
+[package]: https://www.npmjs.com/package/react-zxing-scanner
+[npmtrends]: https://npmtrends.com/react-zxing-scanner
