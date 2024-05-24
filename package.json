@@ -33,7 +33,7 @@
   "homepage": "https://www.instagram.com/tldkhang/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/taleduykhang/react-zxing-scanner"
+    "url": "https://github.com/tldkhang/react-zxing-scanner"
   },
   "eslintConfig": {
     "extends": [
