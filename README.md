@@ -1,14 +1,21 @@
-# react-zxing-scanner
+### react-zxing-scanner
 
-Install react-zxing-scanner library
+## Installation
+```bash
+yarn add react-zxing-scanner
+```
+or
+```bash
+npm i react-zxing-scanner
+```
 
-    npm i react-zxing-scanner
-              or
-    yarn add react-zxing-scanner
+<details>
+  <summary>MacOS recommend install</summary>
 
-MacOS recommend install
-
-    bun add react-zxing-scanner
+```bash
+bun add react-zxing-scanner
+```
+</details>
 
 Example
 
