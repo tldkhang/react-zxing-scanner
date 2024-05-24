@@ -1,4 +1,4 @@
-### react-zxing-scanner
+# react-zxing-scanner
 
 ## Installation
 
