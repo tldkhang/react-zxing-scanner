@@ -1,10 +1,12 @@
 # react-zxing-scanner
 
 Install react-zxing-scanner library
+
     npm i react-zxing-scanner
     yarn add react-zxing-scanner
 
 MacOs recommend install
+
     bun add react-zxing-scanner
 
 Then you can use the ScannerComponent
