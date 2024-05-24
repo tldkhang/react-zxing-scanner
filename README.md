@@ -1,7 +1,7 @@
 
 <h1 align="center">
 
-  [![Icon][gif-scan]] react-zxing-scanner
+  ![Icon][gif-scan] react-zxing-scanner
 
 </h1>
 
