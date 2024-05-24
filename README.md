@@ -1,11 +1,14 @@
+
 <h1 align="center">
+
   [![Icon][gif-scan]] react-zxing-scanner
+
 </h1>
 
 <div align="center">
 
 Performant ReactJS Scanner barcode.
-
+[![Icon][gif-scan]]
 [![Version][version-badge]][package]
 [![Downloads][downloads-badge]][npmtrends]
 
