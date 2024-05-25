@@ -1,7 +1,5 @@
-<h1 align="center"style="display: flex; justify-content: center, align-items: center">
-
-<image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px " />
-
+<h1 align="center" style="display: flex; justify-content: center, align-items: center">
+<image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px" />
 react-zxing-scanner
 </h1>
 
@@ -20,8 +18,11 @@ Performant ReactJS Scanner barcode.
 ```bash
 yarn add react-zxing-scanner
 ```
+<div align="center">
 
 or
+
+</div>
 
 ```bash
 npm i react-zxing-scanner
