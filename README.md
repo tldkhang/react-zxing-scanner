@@ -21,17 +21,14 @@ Performant ReactJS Scanner barcode.
 ```bash
 yarn add react-zxing-scanner
 ```
-<div align="center">
 
 or
-
-</div>
 
 ```bash
 npm i react-zxing-scanner
 ```
 
-MacOS recommend install
+MacOS recommend
 
 ```bash
 bun add react-zxing-scanner
