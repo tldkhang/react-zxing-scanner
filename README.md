@@ -1,10 +1,9 @@
-<h1 align="center" style="display: flex; justify-content: center">
+<div align="center" style="display: flex; justify-content: center">
 
 <image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px " float="left"/>
+<h1  float="left">react-zxing-scanner<div>
 
-<div  float="left">react-zxing-scanner<div>
-
-</h1>
+</div>
 
 <div align="center">
 
