@@ -1,6 +1,9 @@
-<h1 align="center" style="display: flex; justify-content: center, align-items: center">
-<image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px; margin-top: 40px" />
-react-zxing-scanner
+<h1 align="center" style="display: flex; justify-content: center">
+
+<!-- <image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px" /> -->
+
+<div>react-zxing-scanner</div>
+
 </h1>
 
 <div align="center">
@@ -40,12 +43,20 @@ Here is a quick example
 
 ```tsx
 import React from "react";
-import BarcodeScanner from "react-zxing-scanner";
+import { ReactZxingScanner } from "react-zxing-scanner";
+import { Exception, Result } from "@zxing/library";
 
 export const App = () => {
   return (
     <>
-      <BarcodeScanner />
+      <ReactZxingScanner 
+        onUpdate={(res: Result) => {
+            console.log('data', res.toString())
+        }}
+        onError={(err: Exception) => {
+            console.error('err', err.toString())
+        }}
+      />
     </>
   );
 };

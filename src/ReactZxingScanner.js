@@ -7,13 +7,14 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react";
 import style from "./App.module.css";
 import { useCamera } from "./CameraProvider.js";
+import PropTypes from "prop-types";
 import {
   checkArray,
   getDeviceCamera,
   requestPermissionCamera,
 } from "./function/requestPermission.js";
-
-const BarcodeScanner = () => {
+import { CameraProvider } from "./CameraProvider.js";
+const ReactZxingScanner = ({ onUpdate, onError }) => {
   const [lineTop, setLineTop] = useState(0);
   const [direction, setDirection] = useState(1);
   const lineSpeed = 2; // Adjust the speed of the moving line
@@ -114,13 +115,15 @@ const BarcodeScanner = () => {
     await codeReader
       .decodeFromVideoDevice(deviceId, videoElement, (result) => {
         if (!!result) {
-          // onUpdate(result);
+          onUpdate(result);
           codeReader.reset();
         }
       })
       .catch((error) => {
         console.error("Error video stream: ", error);
-        // onError(error);
+        if (!!onError) {
+          onError(error);
+        }
       });
   }, []);
 
@@ -130,68 +133,77 @@ const BarcodeScanner = () => {
   }, []);
 
   return (
-    <div className={"relative h-[100vh] w-full flex-1 overflow-hidden"}>
-      <video
-        ref={previewElemRef}
-        autoPlay
-        muted
-        className={style.webcam}
-        style={{
-          height: "100vh",
-        }}
-      />
-      {checkArray(listDevicesRef.current) && (
-        <div
+    <CameraProvider>
+      <div className={"relative h-[100vh] w-full flex-1 overflow-hidden"}>
+        <video
+          ref={previewElemRef}
+          autoPlay
+          muted
+          className={style.webcam}
           style={{
-            position: "absolute",
-            top: "5vw",
-            left: "2vw",
-            zIndex: 999999,
+            height: "100vh",
           }}
-        >
-          <select onChange={onChangeCamera} value={selectedDevice}>
-            {listDevicesRef.current.map((device) => {
-              return (
-                <option key={device.deviceId} value={device.deviceId}>
-                  {device.label}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-      )}
-      <div className="absolute left-0 top-0 z-[999] flex h-[100vh] w-[100vw] flex-col items-center justify-around ">
-        <div
-          className={`flex h-[100vw] w-full items-center justify-center`}
-          style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
-        >
-          <div className="text-[34px] text-white">바코드를 스캔하세요</div>
-        </div>
-        <div className="flex items-center">
+        />
+        {checkArray(listDevicesRef.current) && (
           <div
-            className={`h-[60vw] w-[10vw]`}
-            style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
-          />
-          <div
-            id="scan-bar"
-            className="relative h-[60vw] w-[80vw] border-2 border-white bg-transparent"
+            style={{
+              position: "absolute",
+              top: "5vw",
+              left: "2vw",
+              zIndex: 999999,
+            }}
           >
+            <select onChange={onChangeCamera} value={selectedDevice}>
+              {listDevicesRef.current.map((device) => {
+                return (
+                  <option key={device.deviceId} value={device.deviceId}>
+                    {device.label}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        )}
+        <div className="absolute left-0 top-0 z-[999] flex h-[100vh] w-[100vw] flex-col items-center justify-around ">
+          <div
+            className={`flex h-[100vw] w-full items-center justify-center`}
+            style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
+          >
+            <div className="text-[34px] text-white">바코드를 스캔하세요</div>
+          </div>
+          <div className="flex items-center">
             <div
-              className={`absolute left-0 h-[3px] w-full bg-[#20D932] ${style.moveUpDown}`}
+              className={`h-[60vw] w-[10vw]`}
+              style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
+            />
+            <div
+              id="scan-bar"
+              className="relative h-[60vw] w-[80vw] border-2 border-white bg-transparent"
+            >
+              <div
+                className={`absolute left-0 h-[3px] w-full bg-[#20D932] ${style.moveUpDown}`}
+              />
+            </div>
+            <div
+              className={` h-[60vw] w-[10vw]`}
+              style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
             />
           </div>
           <div
-            className={` h-[60vw] w-[10vw]`}
+            className={`h-full w-full `}
             style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
           />
         </div>
-        <div
-          className={`h-full w-full `}
-          style={{ backgroundColor: "rgba(21, 21, 21, 0.5)" }}
-        />
       </div>
-    </div>
+    </CameraProvider>
   );
 };
 
-export default BarcodeScanner;
+ReactZxingScanner.propTypes = {
+  onUpdate: PropTypes.func.isRequired,
+  onError: PropTypes.func,
+};
+
+ReactZxingScanner.defaultProps = {};
+
+module.exports = ReactZxingScanner;

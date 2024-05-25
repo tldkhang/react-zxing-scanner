@@ -1,45 +1,31 @@
 {
   "name": "react-zxing-scanner",
-  "version": "0.1.4",
+  "version": "0.1.9",
+  "author": "DKhang <taleduykhang13@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tldkhang/react-zxing-scanner"
+  },
+  "main": "/src/ReactZxingScanner.js",
   "dependencies": {
+    "@zxing/browser": "^0.1.5",
+    "@zxing/library": "^0.21.0"
+  },
+  "devDependencies": {
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@types/bun": "latest",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@zxing/browser": "^0.1.5",
-    "@zxing/library": "^0.21.0",
     "css-loader": "^7.1.2",
-    "install": "^0.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.4.5",
     "web-vitals": "^2.1.4",
-    "webpack-cli": "^5.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "release": "webpack --mode production && npm publish --access public"
-
-  },
-  "homepage": "https://www.instagram.com/tldkhang/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tldkhang/react-zxing-scanner"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "webpack-cli": "^5.1.4",
+    "typescript": "^5.4.5"
   },
   "browserslist": {
     "production": [
@@ -53,10 +39,19 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/bun": "latest"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "homepage": "https://github.com/tldkhang",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "release": "webpack --mode production && npm publish --access public"
+  },
+  "types": "/src/index.d.ts"
 }
