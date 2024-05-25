@@ -1,6 +1,6 @@
 {
   "name": "react-zxing-scanner",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "author": "DKhang <taleduykhang13@gmail.com>",
   "repository": {
     "type": "git",
@@ -45,7 +45,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://github.com/tldkhang",
+  "homepage": "https://github.com/tldkhang/react-zxing-scanner?tab=readme-ov-file#react-zxing-scanner",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -53,5 +53,13 @@
     "eject": "react-scripts eject",
     "release": "webpack --mode production && npm publish --access public"
   },
-  "types": "/src/index.d.ts"
+  "types": "/src/index.d.ts",
+  "keywords": [
+    "react",
+    "zxing",
+    "@zxing/browser",
+    "@zxing/library",
+    "scanner-barcode",
+    "scanner"
+  ]
 }
