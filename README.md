@@ -1,5 +1,5 @@
 <h1 align="center" style="display: flex; justify-content: center, align-items: center">
-<image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px; margin-top: 4px" />
+<image src="assets/barcode.gif" style="width: 48px; height: 48px; margin-right:8px; margin-top: 40px" />
 react-zxing-scanner
 </h1>
 
