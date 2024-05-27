@@ -40,7 +40,7 @@ Here is a quick example
 
 ```tsx
 import React from "react";
-import { ReactZxingScanner } from "react-zxing-scanner";
+import  ReactZxingScanner  from "react-zxing-scanner";
 import { Exception, Result } from "@zxing/library";
 
 export const App = () => {
@@ -53,6 +53,7 @@ export const App = () => {
         onError={(err: Exception) => {
             console.error('err', err.toString())
         }}
+        
       />
     </>
   );
