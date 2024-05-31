@@ -10,4 +10,6 @@ export interface ZxingScannerProps {
 }
 
 export { default as ReactZxingScanner } from "../src/ReactZxingScanner";
+export * from "../src/function";
+
 export { useCamera } from "../src/hooks/useCamera";

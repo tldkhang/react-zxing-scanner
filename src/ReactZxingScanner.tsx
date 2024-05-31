@@ -13,8 +13,13 @@ import {
 } from "react";
 import { ZxingScannerProps } from "../dist/index";
 import style from "./app.module.css";
-import { checkArray } from "./function";
+import {
+  checkArray,
+  getDeviceCamera,
+  requestPermissionCamera,
+} from "./function";
 import { useCamera } from "./hooks/useCamera";
+import "./index.css";
 
 const ReactZxingScanner = ({
   onUpdate,
@@ -28,9 +33,8 @@ const ReactZxingScanner = ({
   const [direction, setDirection] = useState(1);
   const lineSpeed = 2; // Adjust the speed of the moving line
   const previewElemRef = useRef(null);
-  const listDevicesRef = useRef<MediaDeviceInfo[] | any>([]);
   const [selectedDevice, setSelectedDevice] = useState<string | undefined>("");
-  const { requestPermissionCamera, getDeviceCamera } = useCamera();
+  const { isPermissionCamera, listDevices, setListDevices } = useCamera();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,11 +67,8 @@ const ReactZxingScanner = ({
   }, [direction, lineTop]);
 
   const init = async () => {
-    const isPermission = await requestPermissionCamera();
-    const arrayDevices = await getDeviceCamera();
-    if (isPermission && checkArray(arrayDevices)) {
-      listDevicesRef.current = arrayDevices;
-      await autostartScanner(arrayDevices);
+    if (isPermissionCamera && checkArray(listDevices)) {
+      await autostartScanner(listDevices);
     } else {
       const hasPermission = await requestPermissionCamera();
       if (!hasPermission) {
@@ -75,7 +76,7 @@ const ReactZxingScanner = ({
         return;
       }
       const devices = await getDeviceCamera();
-      listDevicesRef.current = devices;
+      setListDevices(devices);
 
       await autostartScanner(devices);
     }
@@ -157,7 +158,7 @@ const ReactZxingScanner = ({
           width: width,
         }}
       />
-      {isSelectCamera && checkArray(listDevicesRef.current) && (
+      {isSelectCamera && checkArray(listDevices) && (
         <div
           style={{
             position: "absolute",
@@ -167,7 +168,7 @@ const ReactZxingScanner = ({
           }}
         >
           <select onChange={onChangeCamera} value={selectedDevice}>
-            {listDevicesRef.current.map((device: MediaDeviceInfo) => {
+            {listDevices.map((device: MediaDeviceInfo) => {
               return (
                 <option key={device.deviceId} value={device.deviceId}>
                   {device.label}
